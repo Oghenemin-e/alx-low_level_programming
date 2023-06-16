@@ -1,18 +1,18 @@
 #include <stdio.h>
 
 /**
- *main - print 0123456789 using putchar
+ *main - print alphabet reversed using putchar
  *Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int n = '0';
+	char alpha = 'z';
 
-	while (n <= '9')
+	while (alpha >= 'a')
 	{
-		putchar(n);
-		n++;
+		putchar(alpha);
+		alpha--;
 	}
 	putchar('\n');
 
