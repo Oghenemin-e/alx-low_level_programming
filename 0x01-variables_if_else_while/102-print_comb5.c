@@ -3,23 +3,22 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: Always 0
  */
 int main(void)
 {
-	int i, j;
+	int c, c_two;
 
-	for (i = 0; i <= 99; i++)
+	for (c = 0; c <= 98; c++)
 	{
-		for (j = i; j <= 99; j++)
+		for (c_two = c + 1; c_two <= 99; c_two++)
 		{
-			putchar((i / 10) + '0');
-			putchar((i % 10) + '0');
+			putchar('0' + c / 10);
+			putchar('0' + c % 10);
 			putchar(' ');
-			putchar((j / 10) + '0');
-			putchar((j % 10) + '0');
-
-			if (i != 99 || j != 99)
+			putchar('0' + c_two / 10);
+			putchar('0' + c_two % 10);
+			if (c != 98 || c_two != 99)
 			{
 				putchar(',');
 				putchar(' ');
@@ -28,6 +27,5 @@ int main(void)
 	}
 
 	putchar('\n');
-
 	return (0);
 }
