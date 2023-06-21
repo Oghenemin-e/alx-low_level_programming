@@ -1,33 +1,46 @@
-0x03. C - Debugging
-C
-Debugging
- By: Carrie Ybay
- Weight: 1
- Project will start Jun 20, 2023 6:00 AM, must end by Jun 23, 2023 6:00 AM
- Checker was released at Jun 21, 2023 12:00 AM
- An auto review will be launched at the deadline
-Resources
+### 0x03. C - Debugging
+
+	-----
+
+C - Debugging
+	* By: Carrie Ybay
+	* Weight: 1
+	* Project will start Jun 20, 2023 6:00 AM, must end by Jun 23, 2023 6:00 AM
+	* Checker was released at Jun 21, 2023 12:00 AM
+	* An auto review will be launched at the deadline
+	
+	-----
+
+### Resources
+
 Read or watch:
 
 Debugging
 Rubber Duck Debugging
+
 Debugging is the process of finding and fixing errors in software that prevents it from running correctly. As you become a more advanced programmer and an industry engineer, you will learn how to use debugging tools such as gdb or built-in tools that IDEs have. However, it’s important to understand the concepts and processes of debugging manually.
 
 
 
-Learning Objectives
+### Learning Objectives
+
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-General
-What is debugging
-What are some methods of debugging manually
-How to read the error messages
-Copyright - Plagiarism
+### General
+
+*What is debugging
+*What are some methods of debugging manually
+*How to read the error messages
+
+###Copyright - Plagiarism
 You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
 You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
 You are not allowed to publish any content of this project.
 Any form of plagiarism is strictly forbidden and will result in removal from the program.
-Requirements
+
+
+###Requirements
+
 General
 Allowed editors: vi, vim, emacs
 All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
