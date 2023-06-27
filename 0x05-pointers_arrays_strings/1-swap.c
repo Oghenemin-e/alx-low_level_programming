@@ -1,0 +1,17 @@
+include "main.h"
+
+/**
+ * swap_int - A function that swaps the value of two integers
+ * @a: integer to swap
+ * @b: integer to swap
+ */
+
+void swap_int(int *a, int *b)
+{
+	int apt;
+
+	apt = *a;
+	*a = *b;
+	*b = apt;
+
+}
