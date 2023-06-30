@@ -1,35 +1,25 @@
 #include "main.h"
-#include <unistd.h>
-#include <stdio.h>
 
 /**
  * print_number - Prints an integer
  * @n: The integer to be printed
- *
- * Description: This function prints the given integer using _putchar.
- * If the number is negative, it prints a '-' sign before the absolute value.
  */
+
 void print_number(int n)
 {
+	unsigned int n1;
+
 	if (n < 0)
 	{
+		n1 = -n;
 		_putchar('-');
-		n = -n;
-	}
-
-	int divisor = 1;
-	int temp = n;
-
-	while (temp > 9)
+	} else
 	{
-		divisor *= 10;
-		temp /= 10;
+		n1 = n;
 	}
 
-	while (divisor != 0)
-	{
-		_putchar('0' + (n / divisor));
-		n %= divisor;
-		divisor /= 10;
-	}
+	if (n1 / 10)
+		print_number(n1 / 10);
+
+	_putchar((n1 % 10) + '0');
 }
