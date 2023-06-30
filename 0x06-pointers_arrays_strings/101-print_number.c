@@ -1,8 +1,12 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
  * print_number - Prints an integer
  * @n: The integer to be printed
+ *
+ * Description: This function prints the given integer using _putchar.
+ * If the number is negative, it prints a '-' sign before the absolute value.
  */
 void print_number(int n)
 {
