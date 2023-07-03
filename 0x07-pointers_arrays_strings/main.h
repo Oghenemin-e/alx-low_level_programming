@@ -6,6 +6,10 @@
 * int prototypes()
 */
 
+#include <stdio.h>
+#include <stdlib.h>
+int _putchar(char c);
+
 char *_memset(char *, char, unsigned int);
 char *_memcpy(char *, char *, unsigned int);
 char *_strchr(char *, char);
