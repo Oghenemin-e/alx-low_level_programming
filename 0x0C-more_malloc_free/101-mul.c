@@ -1,49 +1,89 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
+#include "main.h"
 
-int multiply(int num1, int num2)
+/**
+ * _puts - prints a string, followed by a new line,
+ * @str: pointer to the string to print
+ * Return: void
+*/
+void _puts(char *str)
 {
-	return (num1 * num2);
+int i = 0;
+while (str[i])
+{
+	_putchar(str[i]);
+	i++;
 }
 
-int isNumber(const char *str)
+}
+
+/**
+ * _atoi - convert a string to an integer.
+ * @s: char type string
+ * Return: integer converted
+ */
+
+int _atoi(const char *s)
 {
-	while (*str)
+	int sign = 1;
+	unsigned long int resp = 0, firstNum, i;
+
+	for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
 	{
-		if (!isdigit(*str))
+		if (s[firstNum] == '-')
 		{
-			return (0);
+			sign *= -1;
 		}
-		str++;
 	}
 
-	return (1);
+	for (i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
+	{
+		resp *= 10;
+		resp += (s[i] - 48);
+	}
+
+	return (sign * resp);
 }
 
-int main(int argc, char *argv[])
+/**
+ * print_int - prints an integer.
+ * @n: int
+ * Return: 0
+ */
+
+void print_int(unsigned long int n)
 {
-	if (argc != 3)
-	{
-		printf("Error\n");
-		return (98);
-	}
 
-	char *num1_str = argv[1];
-	char *num2_str = argv[2];
+unsigned  long int divisor = 1, i, resp;
 
-	if (!isNumber(num1_str) || !isNumber(num2_str))
-	{
-		printf("Error\n");
-		return (98);
-	}
+for (i = 0; n / divisor > 9; i++, divisor *= 10)
+;
 
-	int num1 = atoi(num1_str);
-	int num2 = atoi(num2_str);
+for (; divisor >= 1; n %= divisor, divisor /= 10)
+{
+	resp = n / divisor;
+	_putchar('0' + resp);
+}
 
-	int result = multiply(num1, num2);
+}
 
-	printf("%d\n", result);
+/**
+ * main - print the result of the multiplication, followed by a new line
+ * @argc: int
+ * @argv: list
+ * Return: 0
+ */
 
-	return (0);
+int main(int argc, char const *argv[])
+{
+(void)argc;
+
+if (argc != 3)
+{
+	_puts("Error ");
+	exit(98);
+}
+print_int(_atoi(argv[1]) * _atoi(argv[2]));
+_putchar('\n');
+
+return (0);
 }
