@@ -1,6 +1,6 @@
-#ifndef CONSTANTS_H
-#define CONSTANTS_H
+#ifndef OBJECT_LIKE_MICRO_H
+#define OBJECT_LIKE_MICRO_H
 
 #define SIZE 1024
 
-#endif /* CONSTANTS_H */
+#endif /* OBJECT_LIKE_MICRO_H */
